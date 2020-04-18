@@ -23,9 +23,10 @@ with open("input.txt", encoding='utf-8') as inp:
 choice_film_1 = input('Выберите первый фильм: ')
 choice_film_2 = input('Выберите второй фильм: ')
 
-while choice_film_1 not in films or choice_film_2 not in films:
-    choice_film_1 = input('Выберите первый фильм: ')
-    choice_film_2 = input('Выберите второй фильм: ')
+while choice_film_1 not in films:
+    choice_film_1 = input('Ошибка. Выберите  еще раз первый фильм: ')
+while choice_film_2 not in films:
+    choice_film_2 = input('Ошибка. Выберите  еще раз второй фильм: ')
 menu_1 = int(input('Что хотите выбрать?\n 1 - Актеры, снимавшиеся хотя бы в обном фильме.\n 2 - '
                    'Все актеры, снимавшиеся в сразу в 2ух фильмах.\n'
           ' 3 -Актеры, участвующие в съемках первого, но не участвующие в съемках второго '))
@@ -51,12 +52,14 @@ print('')
 print('Список актеров:')
 for i in all_actors_mn:
     print(i)
+
 choice_actor_1 = input('Выберите первого актера: ')
 choice_actor_2 = input('Выберите второго актера: ')
 
-while choice_actor_1 not in actors or choice_actor_2 not in actors:
-    choice_actor_1 = input('Выберите первого актера: ')
-    choice_actor_2 = input('Выберите второго актера: ')
+while choice_actor_1 not in actors:
+    choice_actor_1 = input('Ошибка. Выберите  еще раз первого актера: ')
+while choice_actor_2 not in actors:
+    choice_actor_2 = input('Ошибка. Выберите  еще раз второго актера: ')
 
 actor_1 = set(actors[choice_actor_1])
 actor_2 = set(actors[choice_actor_2])
